@@ -25,7 +25,7 @@ class AppTextField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text(textFieldLabel),
-          AppDimens.smallDimen.height,
+          AppDimens.smallDimen.sizedBoxHeight,
           SizedBox(
             height: size.height * 0.07,
             width: size.width * 0.75,
@@ -33,7 +33,9 @@ class AppTextField extends StatelessWidget {
               textAlign: TextAlign.center,
               controller: textFieldController,
               keyboardType: textInputType,
-              decoration: InputDecoration(hintText: textFiledHintText),
+              decoration: InputDecoration(
+                hintText: textFiledHintText,
+              ),
             ),
           )
         ],

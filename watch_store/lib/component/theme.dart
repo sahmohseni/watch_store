@@ -19,9 +19,12 @@ ThemeData lightAppTheme() {
               }
             },
           ),
+          contentPadding: const EdgeInsets.all(AppDimens.mediumDimen),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(AppDimens.mediumDimen),
-              borderSide: const BorderSide(color: AppColors.borderColor)),
+              borderSide: const BorderSide(
+                  color: AppColors.borderColor,
+                  width: AppDimens.textFieldBorderWidth)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(AppDimens.mediumDimen),
               borderSide: const BorderSide(color: AppColors.primaryColor))));
