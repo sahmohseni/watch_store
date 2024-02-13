@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:watch_store/component/theme.dart';
 import 'package:watch_store/screens/send_otp_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SendOtpScreen(),
+    return MaterialApp(
+      theme: lightAppTheme(),
+      home: const SendOtpScreen(),
     );
   }
 }

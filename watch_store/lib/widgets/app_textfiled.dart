@@ -9,7 +9,8 @@ class AppTextField extends StatelessWidget {
   final TextInputType textInputType;
   final Widget textFieldIcon;
   const AppTextField(
-      {required this.textFieldLabel,
+      {super.key,
+      required this.textFieldLabel,
       required this.textFiledHintText,
       required this.textFieldController,
       this.textFieldIcon = const SizedBox.shrink(),
@@ -19,7 +20,7 @@ class AppTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
     return Padding(
-      padding: EdgeInsets.all(AppDimens.mediumDimen),
+      padding: const EdgeInsets.all(AppDimens.mediumDimen),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
@@ -32,6 +33,7 @@ class AppTextField extends StatelessWidget {
               textAlign: TextAlign.center,
               controller: textFieldController,
               keyboardType: textInputType,
+              decoration: InputDecoration(hintText: textFiledHintText),
             ),
           )
         ],
